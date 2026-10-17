@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="bootkit\bootkit\src\bootkit\arch\x86\memory.cpp">
+      <Filter>src\bootkit\arch\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="bootkit\bootkit\src\bootkit\arch\x86\control_register.cpp">
+      <Filter>src\bootkit\arch\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="bootkit\bootkit\src\bootkit\hooks\convert_pointer.cpp">
+      <Filter>src\bootkit\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="bootkit\bootkit\src\bootkit\forensics\evasion.cpp">
+      <Filter>src\bootkit\forensics</Filter>
+    </ClCompile>
+    <ClCompile Include="bootkit\bootkit\src\bootkit\binary\elf.cpp">
+      <Filter>src\bootkit\binary</Filter>
+    </ClCompile>
+    <ClCompile Include="bootkit\bootkit\src\bootkit\binary\pe.cpp">
+      <Filter>src\bootkit\binary</Filter>
+    </ClCompile>
+    <ClCompile Include="bootkit\bootkit\src\bootkit\binary\heuristic.cpp">
+      <Filter>src\bootkit\binary</Filter>
+    </ClCompile>
+    <ClCompile Include="bootkit\bootkit\src\bootkit\binary\identifier.cpp">
+      <Filter>src\bootkit\binary</Filter>
+    </ClCompile>
+    <ClCompile Include="bootkit\bootkit\src\bootkit\hooks\bzimage.cpp">
+      <Filter>src\bootkit\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="bootkit\bootkit\src\bootkit\debug.cpp">
+      <Filter>src\bootkit</Filter>
+    </ClCompile>
+    <ClCompile Include="bootkit\bootkit\src\bootkit\hooks\efi.cpp">
+      <Filter>src\bootkit\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="bootkit\bootkit\src\bootkit\entry.cpp">
+      <Filter>src\bootkit</Filter>
+    </ClCompile>
+    <ClCompile Include="bootkit\bootkit\src\bootkit\hooking\jmp_hooking.cpp">
+      <Filter>src\bootkit\hooking</Filter>
+    </ClCompile>
+    <ClCompile Include="bootkit\bootkit\src\bootkit\hooks\linux.cpp">
+      <Filter>src\bootkit\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="bootkit\bootkit\src\bootkit\arch\x86\rand.cpp">
+      <Filter>src\bootkit\arch\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="bootkit\bootkit\src\bootkit\arch\x86\msr.cpp">
+      <Filter>src\bootkit\arch\x86</Filter>
+    </ClCompile>
+    <ClCompile Include="bootkit\bootkit\src\autogen\debug\AutoGen.c">
+      <Filter>src\autogen</Filter>
+    </ClCompile>
+    <ClCompile Include="bootkit\bootkit\src\bootkit\hooks\grub.cpp">
+      <Filter>src\bootkit\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="bootkit\bootkit\src\bootkit\grub\grubx64.cpp">
+      <Filter>src\bootkit\grub</Filter>
+    </ClCompile>
+    <ClCompile Include="bootkit\bootkit\src\bootkit\linux\kallsyms.cpp">
+      <Filter>src\bootkit\linux</Filter>
+    </ClCompile>
+    <ClCompile Include="bootkit\bootkit\src\bootkit\utils\rand\splitmix64.cpp">
+      <Filter>includes\bootkit\utils\rand</Filter>
+    </ClCompile>
+    <ClCompile Include="bootkit\bootkit\src\bootkit\hooks\shim.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\c_to_cpp_fwd.h">
+      <Filter>includes\bootkit</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\debug.hpp">
+      <Filter>includes\bootkit</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\general.hpp">
+      <Filter>includes\bootkit</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\globals.hpp">
+      <Filter>includes\bootkit</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\uefi_internals.hpp">
+      <Filter>includes\bootkit</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\binary\heuristic.hpp">
+      <Filter>includes\bootkit\binary</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\binary\elf.hpp">
+      <Filter>includes\bootkit\binary</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\binary\pe.hpp">
+      <Filter>includes\bootkit\binary</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\interfaces.hpp">
+      <Filter>includes\bootkit</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\hooks\efi.hpp">
+      <Filter>includes\bootkit\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\grub\grubx64.hpp">
+      <Filter>includes\bootkit\grub</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\guids.hpp">
+      <Filter>includes\bootkit</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\forensics\evasion.hpp">
+      <Filter>includes\bootkit\forensics</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\binary\identifier.hpp">
+      <Filter>includes\bootkit\binary</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\arch\x86\control_register.hpp">
+      <Filter>includes\bootkit\arch\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\arch\x86\memory.hpp">
+      <Filter>includes\bootkit\arch\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\arch\x86\x86.hpp">
+      <Filter>includes\bootkit\arch\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\windows\wintern\types.hpp">
+      <Filter>includes\bootkit\windows\wintern</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\utils\string.hpp">
+      <Filter>includes\bootkit\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\windows\ntoskrnl.hpp">
+      <Filter>includes\bootkit\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\windows\internals.hpp">
+      <Filter>includes\bootkit\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\hooks\linux.hpp">
+      <Filter>includes\bootkit\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\linux\vmlinux.hpp">
+      <Filter>includes\bootkit\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\hooks\bzimage.hpp">
+      <Filter>includes\bootkit\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\hooking\jmp_hooking.hpp">
+      <Filter>includes\bootkit\hooking</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\hooking\service_ptr.hpp">
+      <Filter>includes\bootkit\hooking</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\hooking\shadow_table.hpp">
+      <Filter>includes\bootkit\hooking</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\linux\uapi\asm\ioctl.hpp">
+      <Filter>includes\linux\uapi\asm</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\linux\uapi\linux\screen_info.hpp">
+      <Filter>includes\linux\uapi\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\linux\uapi\asm\bootparam.hpp">
+      <Filter>includes\linux\uapi\asm</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\linux\uapi\asm\ist.hpp">
+      <Filter>includes\linux\uapi\asm</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\linux\uapi\linux\apm_bios.hpp">
+      <Filter>includes\linux\uapi\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\linux\uapi\linux\edd.hpp">
+      <Filter>includes\linux\uapi\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\linux\uapi\video\edid.hpp">
+      <Filter>includes\linux\uapi\video</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\arch\abi.hpp">
+      <Filter>includes\bootkit\arch</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\arch\x86\rand.hpp">
+      <Filter>includes\bootkit\arch\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\arch\x86\msr.hpp">
+      <Filter>includes\bootkit\arch\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\hooks\grub.hpp">
+      <Filter>includes\bootkit\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\hooks\shim.hpp">
+      <Filter>includes\bootkit\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\linux\kallsyms.hpp">
+      <Filter>includes\bootkit\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\linux\kern_levels.hpp">
+      <Filter>includes\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\utils\rand\splitmix64.hpp">
+      <Filter>src\bootkit\utils\rand</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="includes">
+      <UniqueIdentifier>{77b58cb9-eff5-4c31-bea5-571ecbaf1cca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{0bfd0110-ddc5-43f3-9e08-b7c279bcb3ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\">
+      <UniqueIdentifier>{6a20ca7e-0129-4381-8178-7f1fa231d475}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\bootkit">
+      <UniqueIdentifier>{7b985a95-d399-4486-a9a0-1eb1cd2c275f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\bootkit\hooks">
+      <UniqueIdentifier>{11111e03-d090-47b8-8bc2-96e24c2341e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\bootkit\binary">
+      <UniqueIdentifier>{199615fb-1736-4e1d-bf86-230019ff8e37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\bootkit\forensics">
+      <UniqueIdentifier>{c7073bb6-1fb4-4646-b98b-892deef05739}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\bootkit\utils">
+      <UniqueIdentifier>{a0a304ec-bbf1-4912-89f3-f4714e15d923}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\bootkit\windows">
+      <UniqueIdentifier>{bd5d161f-4b06-411e-b468-e709ecdd5e85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\linux">
+      <UniqueIdentifier>{aa0dc3c1-92db-4ebf-96b8-da2944e9473b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\bootkit\grub">
+      <UniqueIdentifier>{ac090ab9-6fb7-493e-bf0c-5efeb7754828}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\bootkit\hooking">
+      <UniqueIdentifier>{16fc2657-ab7e-459d-8739-99d7a6906e24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\bootkit\linux">
+      <UniqueIdentifier>{b15fb196-8460-410e-aa0c-c698effb960a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\bootkit\arch">
+      <UniqueIdentifier>{f69d62e3-47e0-4a1d-a4fd-f3a4a87cad59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\bootkit\arch\x86">
+      <UniqueIdentifier>{6b3f58a7-5618-4d55-ac14-9cb0804ae8d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\bootkit\windows\wintern">
+      <UniqueIdentifier>{7b4c56f9-f7e5-4a47-963f-ac4113e5434b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\bootkit">
+      <UniqueIdentifier>{82db2565-e4c8-49df-af48-258d6a797a0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\bootkit\binary">
+      <UniqueIdentifier>{182ef158-e65a-4e0e-82ab-a0da301cc6d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\bootkit\forensics">
+      <UniqueIdentifier>{bc065405-f127-4c19-9e49-3df5e14b0055}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\bootkit\hooks">
+      <UniqueIdentifier>{001ed50c-43cb-4387-8667-e95d20b1a484}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\bootkit\hooking">
+      <UniqueIdentifier>{c38343c9-a031-4f28-8a70-836f9af9e036}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\bootkit\arch">
+      <UniqueIdentifier>{0dbf7976-a4c3-4b4c-87c8-d94405bb3614}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\bootkit\arch\x86">
+      <UniqueIdentifier>{2e2e5b24-761d-4ac6-bc1a-9e0415e7237f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\bootkit\utils">
+      <UniqueIdentifier>{bf2ae871-c6b7-4141-9e65-97be947a01c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\bootkit\windows">
+      <UniqueIdentifier>{4a6de524-4cd5-4cd9-bdd4-e498f3766c9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\linux\uapi">
+      <UniqueIdentifier>{5a15fc39-37e5-418c-a958-0ad50f2b9d9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\linux\uapi\asm">
+      <UniqueIdentifier>{27a97a93-5313-43d7-8d17-d4f1491c5fe8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\linux\uapi\linux">
+      <UniqueIdentifier>{825f7351-cbad-4f18-8359-d1421d0384b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\linux\uapi\video">
+      <UniqueIdentifier>{910a7de6-0961-4edb-af7c-831c7ec48eb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\autogen">
+      <UniqueIdentifier>{84f32a66-da2e-4dec-8063-580b4073d10c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\bootkit\grub">
+      <UniqueIdentifier>{595cdb92-ed22-457f-ae0c-178fc9456c9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\bootkit\linux">
+      <UniqueIdentifier>{106f3ebd-fd96-4cab-a68c-75c15c33395e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\bootkit\utils\rand">
+      <UniqueIdentifier>{aaf24f54-24dd-463a-b91d-b49f2bc0ef40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="includes\bootkit\utils\rand">
+      <UniqueIdentifier>{b7a4900a-d40f-4dd3-9255-6a986b82fd48}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

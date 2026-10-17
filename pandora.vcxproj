@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{8178ac3c-25c4-4e1c-92da-6dd32c39ebff}</ProjectGuid>
+    <RootNamespace>notnamed</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>bootkit</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>ClangCL</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="edk2.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="edk2.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetExt>.efi</TargetExt>
+    <ExtensionsToDeleteOnClean>$(ExtensionsToDeleteOnClean);$(TargetPath).manifest;$(OutDir)$(TargetName).tlb;$(OutDir)$(TargetName).pdb;$(TargetPath);$(OutDir)$(TargetName).bsc;$(OutDir)$(TargetName).ilk;$(TargetPath).intermediate.manifest;$(IntermediateOutputPath)$(CleanFile)</ExtensionsToDeleteOnClean>
+    <ManagedAssembly>false</ManagedAssembly>
+    <IncludePath>$(ShortProjectName)\$(ShortProjectName)\includes;edk2\MdePkg\Include;edk2\MdePkg\Include\X64;edk2\MdeModulePkg\Include;$(EDK2_AUTOGEN_DIR);$(IncludePath)</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath);$(_ZVcpkgCurrentInstalledDir)include</ExternalIncludePath>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+    <OutDir>$(SolutionDir)$(ShortProjectName)\$(ShortProjectName)\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)$(ShortProjectName)\$(ShortProjectName)\objs\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetExt>.efi</TargetExt>
+    <ExtensionsToDeleteOnClean>$(ExtensionsToDeleteOnClean);$(TargetPath).manifest;$(OutDir)$(TargetName).tlb;$(OutDir)$(TargetName).pdb;$(TargetPath);$(OutDir)$(TargetName).bsc;$(OutDir)$(TargetName).ilk;$(TargetPath).intermediate.manifest;$(IntermediateOutputPath)$(CleanFile)</ExtensionsToDeleteOnClean>
+    <ManagedAssembly>false</ManagedAssembly>
+    <IncludePath>$(ShortProjectName)\$(ShortProjectName)\includes;edk2\MdePkg\Include;edk2\MdePkg\Include\X64;edk2\MdeModulePkg\Include;$(EDK2_AUTOGEN_DIR);$(IncludePath)</IncludePath>
+    <ExternalIncludePath>$(ExternalIncludePath);$(_ZVcpkgCurrentInstalledDir)include</ExternalIncludePath>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+    <IntDir>$(SolutionDir)$(ShortProjectName)\$(ShortProjectName)\objs\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)$(ShortProjectName)\$(ShortProjectName)\bin\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <VcpkgTriplet>$(VcpkgPlatformTarget)-$(VcpkgOSTarget)$(_ZVcpkgLinkage)$(_ZVcpkgLinkageMD)</VcpkgTriplet>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <VcpkgTriplet>$(VcpkgPlatformTarget)-$(VcpkgOSTarget)$(_ZVcpkgLinkage)$(_ZVcpkgLinkageMD)</VcpkgTriplet>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_TEST_BUILD;_DEBUG;NO_MSABI_VA_FUNCS;</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(_ZVcpkgCurrentInstalledDir)include</AdditionalIncludeDirectories>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>false</ExceptionHandling>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ControlFlowGuard>false</ControlFlowGuard>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <GuardEHContMetadata>false</GuardEHContMetadata>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+      <ForcedIncludeFiles>$(ShortProjectName)\$(ShortProjectName)\includes\bootkit\c_to_cpp_fwd.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ShowIncludes>true</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>EFI Runtime</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(_ZVcpkgCurrentInstalledDir)$(_ZVcpkgConfigSubdir)lib;$(_ZVcpkgCurrentInstalledDir)$(_ZVcpkgConfigSubdir)lib\manual-link;$(EDK2_LIBS_DIR)\MdePkg\Library;$(EDK2_LIBS_DIR)\MdeModulePkg\Library</AdditionalLibraryDirectories>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <ManifestFile />
+      <EnableUAC />
+      <ProgramDatabaseFile />
+      <Driver>Driver</Driver>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <EntryPointSymbol>_ModuleEntryPoint</EntryPointSymbol>
+      <BaseAddress>0</BaseAddress>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>false</DataExecutionPrevention>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <AdditionalOptions>@$(EDK2_MOD_DEPLIST) %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NO_MSABI_VA_FUNCS;</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(_ZVcpkgCurrentInstalledDir)include</AdditionalIncludeDirectories>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>false</ExceptionHandling>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ControlFlowGuard>false</ControlFlowGuard>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <GuardEHContMetadata>false</GuardEHContMetadata>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile />
+      <ForcedIncludeFiles>$(ShortProjectName)\$(ShortProjectName)\includes\bootkit\c_to_cpp_fwd.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>EFI Runtime</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(_ZVcpkgCurrentInstalledDir)$(_ZVcpkgConfigSubdir)lib;$(_ZVcpkgCurrentInstalledDir)$(_ZVcpkgConfigSubdir)lib\manual-link;$(EDK2_LIBS_DIR)\MdePkg\Library;$(EDK2_LIBS_DIR)\MdeModulePkg\Library</AdditionalLibraryDirectories>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <ManifestFile />
+      <EnableUAC />
+      <ProgramDatabaseFile />
+      <Driver>Driver</Driver>
+      <EntryPointSymbol>_ModuleEntryPoint</EntryPointSymbol>
+      <BaseAddress>0</BaseAddress>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>false</DataExecutionPrevention>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <AdditionalOptions>@$(EDK2_MOD_DEPLIST) %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="bootkit\bootkit\src\bootkit\arch\x86\msr.cpp" />
+    <ClCompile Include="bootkit\bootkit\src\bootkit\arch\x86\rand.cpp" />
+    <ClCompile Include="bootkit\bootkit\src\bootkit\binary\elf.cpp" />
+    <ClCompile Include="bootkit\bootkit\src\bootkit\binary\heuristic.cpp" />
+    <ClCompile Include="bootkit\bootkit\src\bootkit\binary\identifier.cpp" />
+    <ClCompile Include="bootkit\bootkit\src\bootkit\binary\pe.cpp" />
+    <ClCompile Include="bootkit\bootkit\src\bootkit\arch\x86\control_register.cpp" />
+    <ClCompile Include="bootkit\bootkit\src\bootkit\debug.cpp" />
+    <ClCompile Include="bootkit\bootkit\src\bootkit\grub\grubx64.cpp" />
+    <ClCompile Include="bootkit\bootkit\src\bootkit\hooking\jmp_hooking.cpp" />
+    <ClCompile Include="bootkit\bootkit\src\bootkit\hooks\bzimage.cpp" />
+    <ClCompile Include="bootkit\bootkit\src\bootkit\hooks\convert_pointer.cpp" />
+    <ClCompile Include="bootkit\bootkit\src\bootkit\hooks\efi.cpp" />
+    <ClCompile Include="bootkit\bootkit\src\bootkit\hooks\grub.cpp" />
+    <ClCompile Include="bootkit\bootkit\src\bootkit\hooks\linux.cpp" />
+    <ClCompile Include="bootkit\bootkit\src\bootkit\arch\x86\memory.cpp" />
+    <ClCompile Include="bootkit\bootkit\src\bootkit\entry.cpp" />
+    <ClCompile Include="bootkit\bootkit\src\bootkit\forensics\evasion.cpp" />
+    <ClCompile Include="bootkit\bootkit\src\autogen\debug\AutoGen.c" Condition="'$(Configuration)' == 'Debug'" />
+    <ClCompile Include="bootkit\bootkit\src\autogen\release\AutoGen.c" Condition="'$(Configuration)' == 'Release'" />
+    <ClCompile Include="bootkit\bootkit\src\bootkit\hooks\shim.cpp" />
+    <ClCompile Include="bootkit\bootkit\src\bootkit\linux\kallsyms.cpp" />
+    <ClCompile Include="bootkit\bootkit\src\bootkit\utils\rand\splitmix64.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\arch\abi.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\arch\x86\msr.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\arch\x86\rand.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\binary\elf.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\binary\heuristic.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\binary\identifier.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\binary\pe.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\hooks\grub.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\hooks\shim.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\linux\kallsyms.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\utils\rand\splitmix64.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\linux\kern_levels.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\linux\uapi\linux\edd.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\linux\uapi\video\edid.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\linux\uapi\asm\ist.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\linux\uapi\linux\apm_bios.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\linux\uapi\asm\bootparam.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\linux\uapi\asm\ioctl.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\linux\uapi\linux\screen_info.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\arch\x86\x86.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\arch\x86\control_register.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\debug.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\general.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\globals.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\guids.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\hooking\jmp_hooking.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\hooking\service_ptr.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\hooking\shadow_table.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\hooks\bzimage.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\hooks\efi.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\hooks\linux.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\interfaces.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\linux\vmlinux.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\arch\x86\memory.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\grub\grubx64.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\uefi_internals.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\c_to_cpp_fwd.h" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\forensics\evasion.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\utils\string.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\windows\internals.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\windows\ntoskrnl.hpp" />
+    <ClInclude Include="bootkit\bootkit\includes\bootkit\windows\wintern\types.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

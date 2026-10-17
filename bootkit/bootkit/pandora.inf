@@ -1,0 +1,64 @@
+[Defines]
+  INF_VERSION    = 0x0001001B
+  BASE_NAME      = pandora
+  FILE_GUID      = 28b3f474-30c2-42f7-9244-80c504e29af3
+  MODULE_TYPE    = DXE_RUNTIME_DRIVER
+  VERSION_STRING = 1.0
+  ENTRY_POINT    = uefi_main
+  UNLOAD_IMAGE   = uefi_exit
+
+[Sources]
+  src/bootkit/arch/x86/memory.cpp
+  src/bootkit/arch/x86/control_register.cpp
+  src/bootkit/arch/x86/msr.cpp
+  src/bootkit/arch/x86/rand.cpp
+  src/bootkit/binary/elf.cpp
+  src/bootkit/binary/heuristic.cpp
+  src/bootkit/binary/identifier.cpp
+  src/bootkit/binary/pe.cpp
+  src/bootkit/binary/elf.cpp
+  src/bootkit/forensics/evasion.cpp
+  src/bootkit/grub/grubx64.cpp
+  src/bootkit/hooking/jmp_hooking.cpp
+  src/bootkit/hooks/bzimage.cpp
+  src/bootkit/hooks/convert_pointer.cpp
+  src/bootkit/hooks/efi.cpp
+  src/bootkit/hooks/grub.cpp
+  src/bootkit/hooks/linux.cpp
+  src/bootkit/hooks/shim.cpp
+  src/bootkit/utils/rand/splitmix64.cpp
+  src/bootkit/linux/kallsyms.cpp
+  src/bootkit/debug.cpp
+  src/bootkit/entry.cpp
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+
+[LibraryClasses]
+  UefiLib
+  UefiRuntimeLib
+  UefiRuntimeServicesTableLib
+  UefiDriverEntryPoint
+  UefiBootServicesTableLib
+  MemoryAllocationLib
+  DevicePathLib
+  PrintLib
+  BaseLib
+  BaseMemoryLib
+  DebugLib
+
+[Protocols]
+  gEfiShellProtocolGuid
+  gEfiDevicePathProtocolGuid
+  gEfiLoadedImageProtocolGuid
+  gEfiRuntimeArchProtocolGuid
+
+[Guids]
+
+[Depex]
+  TRUE
+
+[BuildOptions]
+  *_*_X64_CC_FLAGS = -fno-exceptions -fno-rtti -I$(MODULE_DIR)/includes -include $(MODULE_DIR)/includes/bootkit/c_to_cpp_fwd.h
+  *_*_X64_CXX_FLAGS = -std=c++20 -fno-exceptions -fno-rtti -I$(MODULE_DIR)/includes -include $(MODULE_DIR)/includes/bootkit/c_to_cpp_fwd.h
