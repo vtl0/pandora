@@ -4,6 +4,8 @@
 *.sln.docstates
 *.props
 
+*~
+
 x64/
 Debug/
 Release/
